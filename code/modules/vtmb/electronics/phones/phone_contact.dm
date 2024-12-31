@@ -20,8 +20,10 @@
 /datum/phonecontact/brujah/check_global_contacts()
 	if(number != GLOB.brujahnumber && name_check != GLOB.brujahname)
 		number = GLOB.brujahnumber
-		name = GLOB.brujahname + " - " + name
-		return TRUE
+		name_check = GLOB.brujahname " - " + name
+		if(name != name_check)
+			name = GLOB.brujahname + " - " + name
+			return TRUE
 	..()
 
 /datum/phonecontact/malkavian
